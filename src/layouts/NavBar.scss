@@ -1,0 +1,38 @@
+@use "variables";
+@use "mixins";
+
+.nav_container {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: variables.$bgColor;
+
+  img {
+    height: 90px;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .nav_link a {
+    font-weight: bold;
+    background-color: variables.$treeColor;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+    color: variables.$primaryColor;
+    transition: 500ms;
+    border-radius: 10px;
+    margin-right: 10px;
+
+    &:hover {
+      background-color: variables.$primaryColor;
+      color: variables.$treeColor;
+    }
+  }
+}

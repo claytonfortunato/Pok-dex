@@ -1,0 +1,75 @@
+@use "variables";
+@use "mixins";
+
+.card-list-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+
+  .card-pokemon {
+    @include mixins.flex-center;
+    flex-direction: column;
+    min-width: 170px;
+    min-height: 262px;
+
+    border-radius: 20px;
+    margin: 0.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+
+    @media screen and (min-width: 1200px) {
+      min-width: 220px;
+    }
+    &:hover {
+      transform: scale(1.03);
+      transition-duration: 200ms;
+    }
+
+    .pokemon-id {
+      margin: 0.3rem 0rem;
+      color: #333;
+    }
+
+    .card-img {
+      background-color: rgba(255, 255, 255, 0.6);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+
+      img {
+        margin-top: 25px;
+        max-width: 90%;
+
+        &:hover {
+          margin-top: -10px;
+          transform: scale(1.1);
+          transition-duration: 300ms;
+        }
+      }
+    }
+
+    .card-info h3 {
+      text-transform: capitalize;
+      color: #333;
+    }
+    .card-types {
+      display: flex;
+      text-transform: capitalize;
+      gap: 10px;
+
+      span {
+        font-size: 12px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+  }
+}

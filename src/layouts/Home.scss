@@ -1,0 +1,74 @@
+@use "variables";
+@use "mixins";
+
+.home {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 90vh;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+    padding-left: 50px;
+
+    h1 {
+      font-size: 3.5rem;
+      color: variables.$primaryColor;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: variables.$primaryColor;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 768px) {
+      .home-container {
+        width: 400px;
+      }
+
+      h1,
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .item a {
+    padding: 10px;
+    text-align: center;
+    max-width: 240px;
+    height: 40px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: variables.$treeColor;
+    color: variables.$primaryColor;
+    font-weight: bold;
+    transition: 500ms;
+    margin-left: 50px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: variables.$primaryColor;
+      color: variables.$treeColor;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    max-height: 646px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

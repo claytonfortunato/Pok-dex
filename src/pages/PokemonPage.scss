@@ -1,0 +1,117 @@
+@use "mixins";
+@use "variables";
+
+.container-pokemon-page {
+  @include mixins.flex-center;
+  background-color: variables.$secondColor;
+  width: 100%;
+  height: 100vh;
+
+  @media screen and (max-width: 600px) {
+    height: 98%;
+  }
+
+  .back-homepage {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
+    justify-content: center;
+    margin: 1.3rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
+    font-size: medium;
+    box-shadow: 0 8px 14px -6px rgba(0, 0, 0, 0.5);
+    transition: 0.4s ease-in-out;
+    &:hover {
+      box-shadow: 0 8px 26px -6px;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .header-main-pokemon {
+    flex-direction: column;
+
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    min-height: 700px;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 14px -6px;
+    transition: 0.4s ease-in-out;
+    &:hover {
+      box-shadow: 0 8px 26px -6px;
+      margin-bottom: 0.4rem;
+    }
+
+    .status-name {
+      display: flex;
+      align-items: center;
+
+      text-transform: capitalize;
+
+      span {
+        position: absolute;
+        top: 14%;
+        right: 35%;
+
+        @media screen and (max-width: 600px) {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+
+    .container-img-pokemon img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .container-info-pokemon {
+      display: flex;
+      justify-content: space-evenly;
+
+      .card-type {
+        span {
+          border-radius: 10px;
+          padding: 8px;
+          margin-left: 10px;
+        }
+      }
+
+      .group-info {
+        margin: 0px 14px;
+
+        p {
+          font-weight: 700;
+        }
+
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .container-stats {
+      width: 100%;
+      margin-top: 20px;
+      @include mixins.flex-center;
+      .stats {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        h4 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
