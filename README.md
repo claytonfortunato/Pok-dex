@@ -7,7 +7,9 @@
 https://user-images.githubusercontent.com/104373308/214087631-2111ff67-4177-4ee5-abe5-c907243f6c96.mp4
 
 
-</p>
+# 🕹 Demo
+
+*  <a href="https://stellular-concha-32c690.netlify.app/homepage" target="_blank">Pokédex</a>
 
 # :computer: Projeto
 Esta aplicação web tem o intuito de listar e detalhar um pouco mais sobre o pokemon selecionado.Essa construção foi devido as informações detalhadas dos pokemons foi devido ao uso da API REST [PokéApi](https://pokeapi.co/).
